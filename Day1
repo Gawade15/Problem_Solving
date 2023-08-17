@@ -24,3 +24,33 @@ class Solution {
        return new int[] {};
     }
 }
+// problem 2 solved kadane algorithm problem  on GFG
+//Given an array Arr[] of N integers. Find the contiguous sub-array(containing at least one number) which has the maximum sum and return its sum
+
+class Solution{
+
+    // arr: input array
+    // n: size of array
+    //Function to find the sum of contiguous subarray with maximum sum.
+    long maxSubarraySum(int arr[], int n){
+        
+        // Your code here
+        long maximum=Integer.MIN_VALUE;
+        long sum=0;
+        for(int i=0;i<n;i++){
+            sum+=arr[i];
+            
+        
+        if(sum>maximum){
+           maximum=sum;
+        }
+         if(sum<0){
+               sum=0;
+         }
+        }
+             return maximum;
+    }
+
+    
+}
+
